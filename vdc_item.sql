@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 3.3.7
--- http://www.phpmyadmin.net
---
--- 主机: 192.168.9.71
--- 生成日期: 2014 年 07 月 02 日 00:08
--- 服务器版本: 5.1.37
--- PHP 版本: 5.2.6p1
+
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -16,15 +9,6 @@ CREATE DATABASE IF NOT EXISTS vdc_item DEFAULT CHARSET=utf8;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
---
--- 数据库: `vdc_item`
---
-
--- --------------------------------------------------------
-
---
--- 表的结构 `gift`
---
 
 DROP TABLE IF EXISTS vdc_item.`gift`;
 CREATE TABLE IF NOT EXISTS vdc_item.`gift` (
@@ -61,9 +45,6 @@ CREATE TABLE IF NOT EXISTS vdc_item.`gift` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `item_gift_log`
---
 
 DROP TABLE IF EXISTS vdc_item.`item_gift_log`;
 CREATE TABLE IF NOT EXISTS vdc_item.`item_gift_log` (
@@ -79,9 +60,6 @@ CREATE TABLE IF NOT EXISTS vdc_item.`item_gift_log` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `item_jackpot`
---
 
 DROP TABLE IF EXISTS vdc_item.`item_jackpot`;
 CREATE TABLE vdc_item.`item_jackpot` 
@@ -96,9 +74,6 @@ PRIMARY KEY(`ItemID`, `Multipe`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `item_storepool`
---
 
 DROP TABLE IF EXISTS vdc_item.`item_storepool`;
 CREATE TABLE IF NOT EXISTS vdc_item.`item_storepool` (
@@ -109,9 +84,6 @@ CREATE TABLE IF NOT EXISTS vdc_item.`item_storepool` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `lucky_user`
---
 
 DROP TABLE IF EXISTS vdc_item.`lucky_user`;
 CREATE TABLE IF NOT EXISTS vdc_item.`lucky_user` (
@@ -125,9 +97,6 @@ CREATE TABLE IF NOT EXISTS vdc_item.`lucky_user` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `price_jackpot`
---
 
 DROP TABLE IF EXISTS vdc_item.`price_jackpot`;
 CREATE TABLE IF NOT EXISTS vdc_item.`price_jackpot` (
@@ -139,9 +108,6 @@ CREATE TABLE IF NOT EXISTS vdc_item.`price_jackpot` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `prop_config`
---
 
 DROP TABLE IF EXISTS vdc_item.`prop_config`;
 CREATE TABLE IF NOT EXISTS vdc_item.`prop_config` (

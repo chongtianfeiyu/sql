@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 3.3.7
--- http://www.phpmyadmin.net
---
--- 主机: 192.168.9.71
--- 生成日期: 2014 年 07 月 02 日 00:16
--- 服务器版本: 5.1.37
--- PHP 版本: 5.2.6p1
+
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -17,15 +10,6 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE DATABASE IF NOT EXISTS vdc_user DEFAULT CHARSET=utf8;
 
---
--- 数据库: `vdc_user`
---
-
--- --------------------------------------------------------
-
---
--- 表的结构 `ip_lock`
---
 
 DROP TABLE IF EXISTS vdc_user.`ip_lock`;
 CREATE TABLE vdc_user.`ip_lock` 
@@ -41,9 +25,6 @@ PRIMARY KEY  (`IPAddr`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `latest_enter_room`
---
 
 DROP TABLE IF EXISTS vdc_user.`latest_enter_room`;
 CREATE TABLE IF NOT EXISTS vdc_user.`latest_enter_room` (
@@ -55,9 +36,6 @@ CREATE TABLE IF NOT EXISTS vdc_user.`latest_enter_room` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `mac_lock`
---
 
 DROP TABLE IF EXISTS vdc_user.`mac_lock`;
 CREATE TABLE vdc_user.`mac_lock` 
@@ -73,9 +51,6 @@ PRIMARY KEY  (`MacAddr`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `month_fans`
---
 
 DROP TABLE IF EXISTS vdc_user.`month_fans`;
 CREATE TABLE vdc_user.`month_fans` (
@@ -89,9 +64,6 @@ CREATE TABLE vdc_user.`month_fans` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `player_task_info`
---
 
 DROP TABLE IF EXISTS vdc_user.`player_task_info`;
 CREATE TABLE IF NOT EXISTS vdc_user.`player_task_info` (
@@ -104,9 +76,6 @@ CREATE TABLE IF NOT EXISTS vdc_user.`player_task_info` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `super_fans`
---
 
 DROP TABLE IF EXISTS vdc_user.`super_fans`;
 CREATE TABLE vdc_user.`super_fans` (
@@ -119,9 +88,6 @@ CREATE TABLE vdc_user.`super_fans` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `uninstall_feedback`
---
 
 DROP TABLE IF EXISTS vdc_user.`uninstall_feedback`;
 CREATE TABLE IF NOT EXISTS vdc_user.`uninstall_feedback` (
@@ -136,9 +102,6 @@ CREATE TABLE IF NOT EXISTS vdc_user.`uninstall_feedback` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_account`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_account`;
 CREATE TABLE vdc_user.`user_account` 
@@ -154,9 +117,6 @@ PRIMARY KEY(`179Uin`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_account_lock`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_account_lock`;
 CREATE TABLE vdc_user.`user_account_lock` 
@@ -172,9 +132,6 @@ PRIMARY KEY  (`RoleID`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_achievement`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_achievement`;
 CREATE TABLE vdc_user.`user_achievement` 
@@ -186,9 +143,7 @@ PRIMARY KEY  (`roleid`, `achievement`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_base_info`
---
+
 DROP TABLE IF EXISTS vdc_user.`user_base_info`;
 CREATE TABLE vdc_user.`user_base_info` 
 (
@@ -236,9 +191,6 @@ PRIMARY KEY  (`RoleID`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_blacklist`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_blacklist`;
 CREATE TABLE IF NOT EXISTS vdc_user.`user_blacklist` (
@@ -250,9 +202,6 @@ CREATE TABLE IF NOT EXISTS vdc_user.`user_blacklist` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_config_info`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_config_info`;
 CREATE TABLE vdc_user.`user_config_info`
@@ -270,9 +219,6 @@ PRIMARY KEY(`RoleID`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_item`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_item`;
 CREATE TABLE vdc_user.`user_item` 
@@ -287,9 +233,6 @@ PRIMARY KEY(`RoleID`, `ItemID`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_ku123to179`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_ku123to179`;
 CREATE TABLE IF NOT EXISTS vdc_user.`user_ku123to179` (
@@ -315,9 +258,6 @@ CREATE TABLE IF NOT EXISTS vdc_user.`user_ku123to179` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_login_fail`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_login_fail`;
 CREATE TABLE vdc_user.`user_login_fail` (
@@ -329,9 +269,6 @@ CREATE TABLE vdc_user.`user_login_fail` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_message`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_message`;
 CREATE TABLE IF NOT EXISTS vdc_user.`user_message` (
@@ -346,9 +283,6 @@ CREATE TABLE IF NOT EXISTS vdc_user.`user_message` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_message_statistic`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_message_statistic`;
 CREATE TABLE vdc_user.`user_message_statistic` 
@@ -367,9 +301,6 @@ PRIMARY KEY(`msg_owner`)
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_online_totaltime`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_online_totaltime`;
 CREATE TABLE IF NOT EXISTS vdc_user.`user_online_totaltime` (
@@ -380,9 +311,6 @@ CREATE TABLE IF NOT EXISTS vdc_user.`user_online_totaltime` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_recommend`
---
 
 DROP TABLE IF EXISTS `vdc_user`.`user_recommend`;
 CREATE TABLE  `vdc_user`.`user_recommend` (
@@ -398,9 +326,6 @@ CREATE TABLE  `vdc_user`.`user_recommend` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_rolename_log`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_rolename_log`;
 CREATE TABLE vdc_user.`user_rolename_log` (
@@ -413,9 +338,6 @@ CREATE TABLE vdc_user.`user_rolename_log` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_room_time_total`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_room_time_total`;
 CREATE TABLE IF NOT EXISTS vdc_user.`user_room_time_total` (
@@ -428,9 +350,6 @@ CREATE TABLE IF NOT EXISTS vdc_user.`user_room_time_total` (
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `user_vipdegrade_record`
---
 
 DROP TABLE IF EXISTS vdc_user.`user_vipdegrade_record`;
 CREATE TABLE vdc_user.`user_vipdegrade_record` 
