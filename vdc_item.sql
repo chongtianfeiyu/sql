@@ -12,36 +12,36 @@ CREATE DATABASE IF NOT EXISTS vdc_item DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS vdc_item.`gift`;
 CREATE TABLE IF NOT EXISTS vdc_item.`gift` (
-  `gid` int(10) unsigned NOT NULL COMMENT 'ÀñÎïID',
-  `giftName` varchar(100) NOT NULL COMMENT 'ÀñÎïÃû³Æ',
-  `giftType` smallint(4) unsigned NOT NULL DEFAULT '0' COMMENT 'ÀñÎïÀàĞÍ',
-  `catalog` smallint(4) unsigned NOT NULL DEFAULT '0' COMMENT '¿Í»§¶ËÖĞÏÔÊ¾À¸Î»',
+  `gid` int(10) unsigned NOT NULL COMMENT 'ç¤¼ç‰©ID',
+  `giftName` varchar(100) NOT NULL COMMENT 'ç¤¼ç‰©åç§°',
+  `giftType` smallint(4) unsigned NOT NULL DEFAULT '0' COMMENT 'ç¤¼ç‰©ç±»å‹',
+  `catalog` smallint(4) unsigned NOT NULL DEFAULT '0' COMMENT 'å®¢æˆ·ç«¯ä¸­æ˜¾ç¤ºæ ä½',
   `stampCat` smallint(4) unsigned NOT NULL DEFAULT '0' COMMENT '',
-  `giftPrice` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ÀñÎï¼Û¸ñ',
-  `giftDesc` varchar(255) NOT NULL DEFAULT '' COMMENT 'ÀñÎïÃèÊö',
-  `startShowTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ÀñÎïÔÚ¿Í»§¶ËÖĞ¿ªÊ¼ÏÔÊ¾µÄÊ±¼ä',
-  `endShowTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ÀñÎïÔÚ¿Í»§¶ËÖĞ½áÊøÏÔÊ¾µÄÊ±¼ä',
-  `showImg` varchar(255) DEFAULT '' COMMENT 'ÀñÎïµÄÍ¼Æ¬',
-  `effectImg` varchar(255) DEFAULT '' COMMENT 'Ğ§¹ûÍ¼Æ¬',
-  `giftStatus` tinyint(1) unsigned NOT NULL DEFAULT '2' COMMENT 'ÀñÎï×´Ì¬',
-  `giftSort` smallint(4) unsigned NOT NULL DEFAULT '0' COMMENT 'ÀñÎïµÄÎ»ÖÃ',
-  `target` char(20) NOT NULL DEFAULT '0' COMMENT 'ÀñÎï×÷ÓÃµÄÄ¿±ê·¶Î§1=>everyone_except_self, 2=>everyone, 3=>self, 4=>nobody)',
-  `region` char(20) NOT NULL DEFAULT '1' COMMENT 'ÀñÎïµÄÓ°Ïì·¶Î§1=>one,2=>all in room,3=>all in region,4=>management in room,5=>normal in room,6=>all)',
+  `giftPrice` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ç¤¼ç‰©ä»·æ ¼',
+  `giftDesc` varchar(255) NOT NULL DEFAULT '' COMMENT 'ç¤¼ç‰©æè¿°',
+  `startShowTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ç¤¼ç‰©åœ¨å®¢æˆ·ç«¯ä¸­å¼€å§‹æ˜¾ç¤ºçš„æ—¶é—´',
+  `endShowTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ç¤¼ç‰©åœ¨å®¢æˆ·ç«¯ä¸­ç»“æŸæ˜¾ç¤ºçš„æ—¶é—´',
+  `showImg` varchar(255) DEFAULT '' COMMENT 'ç¤¼ç‰©çš„å›¾ç‰‡',
+  `effectImg` varchar(255) DEFAULT '' COMMENT 'æ•ˆæœå›¾ç‰‡',
+  `giftStatus` tinyint(1) unsigned NOT NULL DEFAULT '2' COMMENT 'ç¤¼ç‰©çŠ¶æ€',
+  `giftSort` smallint(4) unsigned NOT NULL DEFAULT '0' COMMENT 'ç¤¼ç‰©çš„ä½ç½®',
+  `target` char(20) NOT NULL DEFAULT '0' COMMENT 'ç¤¼ç‰©ä½œç”¨çš„ç›®æ ‡èŒƒå›´1=>everyone_except_self, 2=>everyone, 3=>self, 4=>nobody)',
+  `region` char(20) NOT NULL DEFAULT '1' COMMENT 'ç¤¼ç‰©çš„å½±å“èŒƒå›´1=>one,2=>all in room,3=>all in region,4=>management in room,5=>normal in room,6=>all)',
   `unit` char(10) NOT NULL DEFAULT '' COMMENT '',
-  `icon` char(255) NOT NULL DEFAULT '' COMMENT 'ÀñÎïÍ¼±ê',
-  `useMeans` char(20) NOT NULL DEFAULT '' COMMENT 'Ê¹ÓÃ·½Ê½count=>°´´ÎÊıÊ¹ÓÃ¨ïtime=>¼ÆÊ±Ê¹ÓÃ',
-  `quantity` mediumint(6) unsigned NOT NULL DEFAULT '0' COMMENT '¸ù¾İuse_meansÀ´¾ö¶¨¾ßÌåº¬Òå£¬usemeans £ºcount=>ÊıÁ¿£¬time=>Ê±¼ä',
-  `viplevelMin` char(20) NOT NULL DEFAULT '' COMMENT '¿ÉÒÔÊ¹ÓÃ´ËÀñÎï×îĞ¡µÄvip¼¶±ğ',
-  `viplevelMax` char(20) NOT NULL DEFAULT '' COMMENT '¿ÉÒÔÊ¹ÓÃ´ËÀñÎï×î´óµÄvip¼¶±ğ',
-  `donee` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ÊÜÔùÈË¿É»ñÇ®±Ò',
-  `jackpotProtectionDown` mediumint(4) NOT NULL DEFAULT '0' COMMENT '½±³Ø±£»¤ÖµµÄÉÏÏŞ',
-  `jackpotProtectionUp` mediumint(4) NOT NULL DEFAULT '0' COMMENT '½±³Ø±£»¤ÖµµÄÏÂÏŞ',
+  `icon` char(255) NOT NULL DEFAULT '' COMMENT 'ç¤¼ç‰©å›¾æ ‡',
+  `useMeans` char(20) NOT NULL DEFAULT '' COMMENT 'ä½¿ç”¨æ–¹å¼count=>æŒ‰æ¬¡æ•°ä½¿ç”¨îŸ’time=>è®¡æ—¶ä½¿ç”¨',
+  `quantity` mediumint(6) unsigned NOT NULL DEFAULT '0' COMMENT 'æ ¹æ®use_meansæ¥å†³å®šå…·ä½“å«ä¹‰ï¼Œusemeans ï¼šcount=>æ•°é‡ï¼Œtime=>æ—¶é—´',
+  `viplevelMin` char(20) NOT NULL DEFAULT '' COMMENT 'å¯ä»¥ä½¿ç”¨æ­¤ç¤¼ç‰©æœ€å°çš„vipçº§åˆ«',
+  `viplevelMax` char(20) NOT NULL DEFAULT '' COMMENT 'å¯ä»¥ä½¿ç”¨æ­¤ç¤¼ç‰©æœ€å¤§çš„vipçº§åˆ«',
+  `donee` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'å—èµ äººå¯è·é’±å¸',
+  `jackpotProtectionDown` mediumint(4) NOT NULL DEFAULT '0' COMMENT 'å¥–æ± ä¿æŠ¤å€¼çš„ä¸Šé™',
+  `jackpotProtectionUp` mediumint(4) NOT NULL DEFAULT '0' COMMENT 'å¥–æ± ä¿æŠ¤å€¼çš„ä¸‹é™',
   `moreLuckyProbability` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '',
   `senddesc` varchar(100) NOT NULL DEFAULT '' COMMENT '',
   `giftwords` varchar(255) NOT NULL DEFAULT '' COMMENT '',
   PRIMARY KEY (`gid`),
   KEY `t` (`gid`,`giftName`,`giftType`,`catalog`,`giftStatus`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ÀñÎïÅäÖÃ±í';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ç¤¼ç‰©é…ç½®è¡¨';
 
 -- --------------------------------------------------------
 
@@ -49,12 +49,12 @@ CREATE TABLE IF NOT EXISTS vdc_item.`gift` (
 DROP TABLE IF EXISTS vdc_item.`item_gift_log`;
 CREATE TABLE IF NOT EXISTS vdc_item.`item_gift_log` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `content` text NOT NULL COMMENT 'æ—¥å¿—å†…å®¹',
-  `uid` int(10) unsigned NOT NULL COMMENT 'æ“ä½œäºº',
-  `name` varchar(50) NOT NULL COMMENT 'æ“ä½œäººåç§°',
-  `conStatus` tinyint(2) unsigned NOT NULL DEFAULT '1' COMMENT '1=>æœªæäº¤ 2=>å·²æäº¤',
-  `genTime` int(10) unsigned NOT NULL COMMENT 'æ—¥å¿—å¼€å§‹æ—¶é—´',
-  `conTime` int(10) unsigned NOT NULL COMMENT 'å®Œæˆæ—¶é—´',
+  `content` text NOT NULL COMMENT '',
+  `uid` int(10) unsigned NOT NULL COMMENT '',
+  `name` varchar(50) NOT NULL COMMENT '',
+  `conStatus` tinyint(2) unsigned NOT NULL DEFAULT '1' COMMENT '',
+  `genTime` int(10) unsigned NOT NULL COMMENT '',
+  `conTime` int(10) unsigned NOT NULL COMMENT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
@@ -64,21 +64,23 @@ CREATE TABLE IF NOT EXISTS vdc_item.`item_gift_log` (
 DROP TABLE IF EXISTS vdc_item.`item_jackpot`;
 CREATE TABLE vdc_item.`item_jackpot` 
 (
-`ItemID`    int(10) unsigned default 0  comment 'ÎïÆ·ID£¬ uint16_tĞÍ£¬0±êÊ¾ÎŞĞ§µÄÎïÆ·id',
-`Multipe`   int(10) unsigned default 0 comment '½±³Ø±¶Êı',
-`Jackpot`   int(10) default 0 comment '½±³ØÀïÃæµÄÇ®Êı',
-`Ratio`     int(10) default 0 comment 'ÖĞ½±¸ÅÂÊ',
-`Flag`      tinyint(1) default 0 comment '½±³Ø¿ª¹Ø£¬0±íÊ¾¹Ø±Õ£¬ 1±íÊ¾´ò¿ª£¬Ä¬ÈÏÎª0¹Ø±Õ',
+`ItemID`    int(10) unsigned default 0  comment 'ç‰©å“IDï¼Œ uint16_tå‹ï¼Œ0æ ‡ç¤ºæ— æ•ˆçš„ç‰©å“id',
+`Multipe`   int(10) unsigned default 0 comment 'å¥–æ± å€æ•°',
+`Ratio`     int(10) default 0 comment 'æ¯”ä¾‹',
+`RatioJackpot` int(10) default 0 comment 'æ¯”ä¾‹å¥–æ± ä¸­çš„å¸',
+`Probability`	 int(10) default 0 comment 'æ¦‚ç‡',
+`ProbabilityJackpot` int(10) default 0 comment 'æ¦‚ç‡å¥–æ± ä¸­çš„å¸',
+`Flag`      tinyint(1) default 0 comment 'å¥–æ± å¼€å…³ï¼Œ0è¡¨ç¤ºå…³é—­ï¼Œ 1è¡¨ç¤ºæ‰“å¼€ï¼Œé»˜è®¤ä¸º0å…³é—­',
 PRIMARY KEY(`ItemID`, `Multipe`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 comment 'ĞÒÔËÎïÆ·»òÕß²ÆÉñ¶ÔÓ¦µÄ½±³ØµÄ±¶Êı¼°ÆäÖĞµÄ179±ÒµÄÊıÁ¿';
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 comment 'å¹¸è¿ç‰©å“æˆ–è€…è´¢ç¥å¯¹åº”çš„å¥–æ± çš„å€æ•°åŠå…¶ä¸­çš„179å¸çš„æ•°é‡';
 
 -- --------------------------------------------------------
 
 
 DROP TABLE IF EXISTS vdc_item.`item_storepool`;
 CREATE TABLE IF NOT EXISTS vdc_item.`item_storepool` (
-  `ItemID` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ÎïÆ·ID£¬ uint16_tĞÍ£¬0±êÊ¾ÎŞĞ§µÄÎïÆ·id',
-  `StorePool` int(10) unsigned DEFAULT '0' COMMENT '´æ´¢³ØÀïÃæµÄÇ®Êı',
+  `ItemID` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ç‰©å“IDï¼Œ uint16_tå‹ï¼Œ0æ ‡ç¤ºæ— æ•ˆçš„ç‰©å“id',
+  `StorePool` int(10) unsigned DEFAULT '0' COMMENT 'å­˜å‚¨æ± é‡Œé¢çš„é’±æ•°',
   PRIMARY KEY (`ItemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -87,24 +89,24 @@ CREATE TABLE IF NOT EXISTS vdc_item.`item_storepool` (
 
 DROP TABLE IF EXISTS vdc_item.`lucky_user`;
 CREATE TABLE IF NOT EXISTS vdc_item.`lucky_user` (
-  `RoleID` int(10) unsigned NOT NULL COMMENT 'Íæ¼ÒroleID',
-  `ItemID` int(10) unsigned NOT NULL COMMENT 'µÀ¾ßID',
-  `ItemPrice` int(10) unsigned NOT NULL COMMENT 'µÀ¾ß¼Û¸ñ',
-  `LuckyMul` int(10) unsigned NOT NULL COMMENT 'ÖĞ½±±¶Êı',
-  `LuckyCount` int(10) unsigned NOT NULL COMMENT 'ÖĞ½±´ÎÊı',
+  `RoleID` int(10) unsigned NOT NULL COMMENT 'ç©å®¶roleID',
+  `ItemID` int(10) unsigned NOT NULL COMMENT 'é“å…·ID',
+  `ItemPrice` int(10) unsigned NOT NULL COMMENT 'é“å…·ä»·æ ¼',
+  `LuckyMul` int(10) unsigned NOT NULL COMMENT 'ä¸­å¥–å€æ•°',
+  `LuckyCount` int(10) unsigned NOT NULL COMMENT 'ä¸­å¥–æ¬¡æ•°',
   PRIMARY KEY (`RoleID`,`ItemID`,`LuckyMul`,`ItemPrice`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ÖĞ½±ĞÅÏ¢¼ÇÂ¼';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ä¸­å¥–ä¿¡æ¯è®°å½•';
 
 -- --------------------------------------------------------
 
 
 DROP TABLE IF EXISTS vdc_item.`price_jackpot`;
 CREATE TABLE IF NOT EXISTS vdc_item.`price_jackpot` (
-  `ItemPrice` int(10) unsigned NOT NULL COMMENT 'ÀñÎï¼Û¸ñ',
-  `Multipe` int(10) unsigned NOT NULL COMMENT '±¶Êı',
-  `JackPotMoney` int(10) unsigned NOT NULL COMMENT '½±³Ø½ğ¶î',
+  `ItemPrice` int(10) unsigned NOT NULL COMMENT 'ç¤¼ç‰©ä»·æ ¼',
+  `Multipe` int(10) unsigned NOT NULL COMMENT 'å€æ•°',
+  `JackPotMoney` int(10) unsigned NOT NULL COMMENT 'å¥–æ± é‡‘é¢',
   PRIMARY KEY (`ItemPrice`,`Multipe`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='½±³ØĞÅÏ¢';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='å¥–æ± ä¿¡æ¯';
 
 -- --------------------------------------------------------
 

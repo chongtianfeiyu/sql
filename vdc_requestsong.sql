@@ -8,9 +8,12 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+CREATE DATABASE IF NOT EXISTS vdc_requestsong DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `order_list` (
-  `TransID` varchar(128) NOT NULL DEFAULT '' COMMENT '½»Ò×id',
+
+DROP TABLE IF EXISTS `vdc_requestsong`.`order_list`;
+CREATE TABLE IF NOT EXISTS `vdc_requestsong`.`order_list` (
+  `TransID` varchar(128) NOT NULL DEFAULT '' COMMENT 'äº¤æ˜“id',
   `RoomID` int(10) DEFAULT '0',
   `OrderStartTime` bigint(20) DEFAULT '0',
   `OrderEndTime` bigint(20) DEFAULT '0',
@@ -32,16 +35,16 @@ CREATE TABLE IF NOT EXISTS `order_list` (
   `GerneralGiveupCount` int(11) DEFAULT '0',
   `MarkResult` int(11) DEFAULT '0',
   PRIMARY KEY (`TransID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='µã¸è½»Ò×µÄ¼ÇÂ¼';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ç‚¹æ­Œäº¤æ˜“çš„è®°å½•';
 
 -- --------------------------------------------------------
 
-
-CREATE TABLE IF NOT EXISTS `song_list` (
-  `SongIndex` int(10) unsigned NOT NULL COMMENT '¸èÇúË÷Òı',
-  `SongerRoleID` int(10) unsigned NOT NULL COMMENT '¸èÊÖid',
-  `RoomID` int(10) NOT NULL DEFAULT '0' COMMENT 'ËùÊô·¿¼äid',
-  `SongName` varchar(128) DEFAULT '' COMMENT '¸èÇúÃû³Æ',
-  `SongAttr` int(10) unsigned DEFAULT '0' COMMENT '¸èÇúÊôĞÔ£¬ÈçÈÈÍÆ',
+DROP TABLE IF EXISTS `vdc_requestsong`.`song_list`;
+CREATE TABLE IF NOT EXISTS `vdc_requestsong`.`song_list` (
+  `SongIndex` int(10) unsigned NOT NULL COMMENT 'æ­Œæ›²ç´¢å¼•',
+  `SongerRoleID` int(10) unsigned NOT NULL COMMENT 'æ­Œæ‰‹id',
+  `RoomID` int(10) NOT NULL DEFAULT '0' COMMENT 'æ‰€å±æˆ¿é—´id',
+  `SongName` varchar(128) DEFAULT '' COMMENT 'æ­Œæ›²åç§°',
+  `SongAttr` int(10) unsigned DEFAULT '0' COMMENT 'æ­Œæ›²å±æ€§ï¼Œå¦‚çƒ­æ¨',
   PRIMARY KEY (`SongerRoleID`,`RoomID`,`SongIndex`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='¸èÊÖµÄ¸èµ¥';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='æ­Œæ‰‹çš„æ­Œå•';
